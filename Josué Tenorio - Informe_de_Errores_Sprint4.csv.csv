@@ -1,0 +1,787 @@
+Resumen,Clave de incidencia,ID de la incidencia,Tipo de Incidencia,Estado,Clave del proyecto,Nombre del proyecto,Tipo de proyecto,Responsable del proyecto,ID del responsable del proyecto,Descripción del proyecto,Prioridad,Resolución,Persona asignada,ID de la persona asignada,Informador,ID del informador,Creador,ID del creador,Creada,Actualizada,Vista por Última Vez,Resuelta,Fecha de vencimiento,Votos,Descripción,Entorno,Interesados,ID de los interesados,Estimación original,Trabajo restante estimado,Tiempo Trabajado,Relación de trabajo,Σ Estimación original,Σ Trabajo restante estimado,Σ Tiempo empleado,Nivel de Seguridad,Enlace a la incidencia interna (Cloners),Enlace de incidencia saliente (Cloners),Adjunto,Campo personalizado (Actual end),Campo personalizado (Actual start),Campo personalizado (Change reason),Campo personalizado (Change risk),Campo personalizado (Change type),Campo personalizado (Epic Color),Campo personalizado (Epic Name),Campo personalizado (Epic Status),Campo personalizado (Formularios abiertos),Campo personalizado (Formularios bloqueados),Campo personalizado (Formularios enviados),Campo personalizado (Impact),Campo personalizado (Issue color),Campo personalizado (Metas),Campo personalizado (Project overview key),Campo personalizado (Project overview status),Campo personalizado (Rank),Campo personalizado (Request Type),Campo personalizado (Sentiment),Campo personalizado (Start date),Campo personalizado (Story Points),Campo personalizado (Story point estimate),Campo personalizado (Target end),Campo personalizado (Target start),Campo personalizado (Team),Campo personalizado (Total de formularios),Campo personalizado (Vulnerability),Campo personalizado ([CHART] Date of First Response),Campo personalizado ([CHART] Time in Status),Campo personalizado (development),Categoría de estado,Categoría de estado cambiada
+"El campo ""productsWeight"" acepta el campo vacío",TQP4-32,10065,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:48 PM,01/feb/25 2:50 PM,12/feb/25 7:47 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar el campo “*productsWeight*” vacío en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 10,
+    ""productsWeight"": "" ""
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":0}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:50 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.50.04 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10064,,,,,,,,,,,,,,,,,0|i000dz:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:48 PM
+"El campo ""productsCount"" acepta el campo vacío",TQP4-31,10064,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:46 PM,01/feb/25 2:49 PM,01/feb/25 2:50 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar el campo “*productsCount*” vacío en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": "" "",
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":5,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:48 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.48.28 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10063,,,,,,,,,,,,,,,,,0|i000dr:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:46 PM
+"El campo ""deliveryTime"" acepta el campo vacío",TQP4-30,10063,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:41 PM,01/feb/25 2:42 PM,01/feb/25 2:41 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar el campo “deliveryTime” vacío en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": "" "",
+    ""productsCount"": 10,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":5,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,TQP4-27,01/feb/25 2:42 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.42.23 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10062,,,,,,,,,,,,,,,,,0|i000dj:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:41 PM
+"El campo ""productsWeight"" acepta caracteres especiales",TQP4-29,10062,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:20 PM,01/feb/25 2:20 PM,01/feb/25 2:20 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres especiales en el campo “*productsWeight*” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 10,
+    ""productsWeight"": ""$""
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":0}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:20 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.20.50 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10061,,,,,,,,,,,,,,,,,0|i000db:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:20 PM
+"El campo ""productsCount"" acepta caracteres especiales",TQP4-28,10061,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:18 PM,01/feb/25 2:48 PM,01/feb/25 2:46 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres especiales en el campo “*productsCount*” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": ""a"",
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:18 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.18.44 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10060,,,,,,,,,,,,,,,,,0|i000d3:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:18 PM
+"El campo ""deliveryTime"" acepta caracteres especiales",TQP4-27,10060,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:13 PM,01/feb/25 2:45 PM,01/feb/25 2:43 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres especiales en el campo “deliveryTime” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": ""$"",
+    ""productsCount"": 10,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":5,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,TQP4-30,,01/feb/25 2:14 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.14.26 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10057,,,,,,,,,,,,,,,,,0|i000cv:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:13 PM
+"El campo ""productsWeight"" acepta caracteres no latinos",TQP4-26,10059,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:09 PM,01/feb/25 2:15 PM,01/feb/25 2:15 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres no latinos en el campo “*productsWeight*” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 10,
+    ""productsWeight"": ""聲""
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":0}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:15 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.15.19 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10058,,,,,,,,,,,,,,,,,0|i000cn:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:09 PM
+"El campo ""productsCount"" acepta caracteres no latinos",TQP4-25,10058,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:06 PM,01/feb/25 2:46 PM,01/feb/25 2:45 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres no latinos en el campo “*productsCount*”  en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": “聲”,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:17 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.17.17 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10059,,,,,,,,,,,,,,,,,0|i000cf:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:06 PM
+"El campo ""deliveryTime"" acepta caracteres no latinos",TQP4-24,10057,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:05 PM,01/feb/25 2:46 PM,01/feb/25 2:46 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres no latinos en el campo “deliveryTime” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": ""聲"",
+    ""productsCount"": 10,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":5,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:05 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.05.29 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10056,,,,,,,,,,,,,,,,,0|i000c7:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:05 PM
+"El campo ""productsWeight"" acepta caracteres latinos",TQP4-23,10056,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 2:01 PM,01/feb/25 2:20 PM,01/feb/25 2:20 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres latinos en el campo “*productsWeight*” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 10,
+    ""productsWeight"": ""a""
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":0}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:02 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.02.42 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10055,,,,,,,,,,,,,,,,,0|i000bz:,,,,,,,,,,,,,,Por hacer,01/feb/25 2:01 PM
+"El campo ""productsCount"" acepta caracteres latinos",TQP4-22,10055,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:59 PM,01/feb/25 2:46 PM,01/feb/25 2:46 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres latinos en el campo “*productsCount*” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": ""a"",
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":3,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 2:00 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 2.00.37 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10054,,,,,,,,,,,,,,,,,0|i000br:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:59 PM
+"El campo ""deliveryTime"" acepta caracteres latinos",TQP4-21,10054,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:55 PM,01/feb/25 2:46 PM,01/feb/25 2:46 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar caracteres latinos en el campo “deliveryTime” en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": ""a"",
+    ""productsCount"": 10,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request* 
+
+h3. *Resultado obtenido: 200 OK - {""name"":""Order and Go"",""isItPossibleToDeliver"":true,""hostDeliveryCost"":5,""toBeDeliveredTime"":{""min"":20,""max"":25},""clientDeliveryCost"":5}*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 1:58 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.58.04 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10053,,,,,,,,,,,,,,,,,0|i000bj:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:55 PM
+Al agregar una fracción de producto a un kit nos arroja el error 500.,TQP4-20,10053,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:48 PM,01/feb/25 1:50 PM,01/feb/25 1:49 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/v1/kits/2/products*
+# *Ingresar un id de productos con decimales en el cuerpo de la solicitud:* 
+{
+ ""productsList"": [
+ {
+ ""id"": 1,
+ ""quantity"":
+ 1.5
+ }
+ ]
+ }
+
+h3. *Resultado esperado: 400 Bad Request*
+
+h3. *Resultado obtenido:* . 500 Internal Server Error
+
+h3. 
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,TQP4-3,01/feb/25 1:50 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.50.32 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10052,,,,,,,,,,,,,,,,,0|i000bb:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:48 PM
+Al agregar un producto a un kit con un id con caracteres especiales arroja el error 500.,TQP4-19,10052,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:46 PM,01/feb/25 1:46 PM,01/feb/25 2:35 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/聲/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""1"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 1:46 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.46.41 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10051,,,,,,,,,,,,,,,,,0|i000b3:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:46 PM
+Al agregar un producto a un kit con un id con letras no latinas arroja el error 500.,TQP4-18,10051,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:44 PM,01/feb/25 1:46 PM,01/feb/25 1:44 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/聲/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""1"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 1:45 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.45.04 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10050,,,,,,,,,,,,,,,,,0|i000av:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:44 PM
+Al agregar un producto a un kit con un id con letras latinas arroja el error 500.,TQP4-17,10050,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:42 PM,01/feb/25 1:44 PM,01/feb/25 1:42 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/a/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""1"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 1:43 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.43.03 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10049,,,,,,,,,,,,,,,,,0|i000an:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:42 PM
+Al agregar un producto a un kit con un id con decimales arroja el error 500.,TQP4-16,10049,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:38 PM,01/feb/25 1:42 PM,01/feb/25 1:40 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/1.2/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""1"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 1:40 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.40.27 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10048,,,,,,,,,,,,,,,,,0|i000af:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:38 PM
+Al agregar un producto al kit con un id con caracteres especiales arroja el error 500.,TQP4-15,10048,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:24 PM,01/feb/25 1:26 PM,01/feb/25 1:26 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/2/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""$"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,TQP4-14,01/feb/25 1:26 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.25.58 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10047,,,,,,,,,,,,,,,,,0|i000a7:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:24 PM
+Al agregar un producto al kit con un id con caracteres no latinos arroja el error 500.,TQP4-14,10047,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:21 PM,01/feb/25 1:26 PM,01/feb/25 1:26 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/2/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""聲"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,TQP4-15,,01/feb/25 1:22 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.16.41 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10046,,,,,,,,,,,,,,,,,0|i0009z:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:21 PM
+Al agregar un producto al kit con un id con caracteres latinos arroja el error 500.,TQP4-13,10046,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,01/feb/25 1:18 PM,01/feb/25 1:39 PM,01/feb/25 1:39 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/2/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": ""a"",
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 400 Bad Request
+
+*Resultado obtenido:* 500 Internal Server Error
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,01/feb/25 1:19 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-02-01 at 1.19.46 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10045,,,,,,,,,,,,,,,,,0|i0009r:,,,,,,,,,,,,,,Por hacer,01/feb/25 1:18 PM
+El costo no es de $9 cuando la cantidad de productos es 17.,TQP4-12,10045,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 11:01 PM,01/feb/25 3:15 PM,01/feb/25 3:15 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar 17 en la cantidad de productos en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 76,
+    ""productsWeight"": 1
+}
+
+h3. *Resultado esperado: 200 OK - ""hostDeliveryCost"": 5 - “clientDeliveryCost”: 9*
+
+h3. *Resultado obtenido: 200 OK - ""hostDeliveryCost"": 5 - “clientDeliveryCost”: 5*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 11:01 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 11.01.34 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10044,,,,,,,,,,,,,,,,,0|i0009j:,,,,,,,,,,,,,,Por hacer,31/ene/25 11:01 PM
+El costo no es de $9 cuando la cantidad de productos es 16.,TQP4-11,10044,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:57 PM,01/feb/25 3:15 PM,01/feb/25 3:28 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar 16 en la cantidad de productos en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 16,
+    ""productsWeight"": 1
+}
+
+h3. *Resultado esperado: 200 OK - ""hostDeliveryCost"": 5 - “clientDeliveryCost”: 9*
+
+h3. *Resultado obtenido: 200 OK - ""hostDeliveryCost"": 5 - “clientDeliveryCost”: 5*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 11:00 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 11.00.04 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10042,,,,,,,,,,,,,,,,,0|i0009b:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:57 PM
+El costo no es de $9 cuando el peso del pedido es de 6.2.,TQP4-10,10043,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:51 PM,01/feb/25 3:10 PM,01/feb/25 3:10 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar un peso de pedido de 6.2 en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 1,
+    ""productsWeight"": 6.2
+}
+
+h3. *Resultado esperado: 200 OK - ""hostDeliveryCost"": 5 - ""clientDeliveryCost"": 9*
+
+h3. *Resultado obtenido: 200 OK - ""hostDeliveryCost"": 5 - ""clientDeliveryCost"": 0*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 11:00 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 11.00.41 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10043,,,,,,,,,,,,,,,,,0|i00093:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:51 PM
+El costo no es de $9 cuando el peso del pedido es de 6.1.,TQP4-9,10042,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:50 PM,01/feb/25 3:09 PM,01/feb/25 3:10 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar un peso de pedido de 6.1 en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 1,
+    ""productsWeight"": 6.1
+}
+
+h3. *Resultado esperado: 200 OK - ""hostDeliveryCost"": 5 ""clientDeliveryCost"": 9*
+
+h3. *Resultado obtenido: 200 OK - ""hostDeliveryCost"": 5 ""clientDeliveryCost"": 0*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 10:50 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.50.36 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10041,,,,,,,,,,,,,,,,,0|i0008v:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:50 PM
+El costo no es de $5 cuando el peso del pedido es de 3.2.,TQP4-8,10041,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:47 PM,01/feb/25 3:07 PM,01/feb/25 3:07 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar un peso de pedido de 3.2 en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 1,
+    ""productsWeight"": 3.2
+}
+
+h3. *Resultado esperado: 200 OK - ""hostDeliveryCost"": 5 - ""clientDeliveryCost"": 0*
+
+h3. *Resultado obtenido: 200 OK - ""hostDeliveryCost"": 3 - ""clientDeliveryCost"": 0*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 10:47 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.42.03 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10040,,,,,,,,,,,,,,,,,0|i0008n:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:47 PM
+El costo no es de $5 cuando el peso del pedido es de 3.1.,TQP4-7,10040,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:44 PM,01/feb/25 3:06 PM,01/feb/25 3:05 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar un peso de pedido de 3.1 en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 9,
+    ""productsCount"": 1,
+    ""productsWeight"": 3.1
+}
+
+h3. *Resultado esperado: 200 OK - ""hostDeliveryCost"": 5 - ""clientDeliveryCost"": 0*
+
+h3. *Resultado obtenido: 200 OK - ""hostDeliveryCost"": 3 - ""clientDeliveryCost"": 0*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,TQP4-6,31/ene/25 10:47 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.42.13 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10039,,,,,,,,,,,,,,,,,0|i0008f:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:44 PM
+Se puede hacer una solicitud una hora después del horario de cierre.,TQP4-6,10039,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:38 PM,01/feb/25 3:03 PM,01/feb/25 3:03 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar 23 en el horario en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 23,
+    ""productsCount"": 10,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request - ""isItPossibleToDeliver"": false,*
+
+h3. *Resultado obtenido: 200 OK ' ""isItPossibleToDeliver"": true,*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,TQP4-7,,31/ene/25 10:39 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.32.57 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10038,,,,,,,,,,,,,,,,,0|i00087:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:38 PM
+Se puede hacer una solicitud una hora antes del horario de apertura.,TQP4-5,10038,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:34 PM,01/feb/25 3:03 PM,01/feb/25 3:03 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/order-and-go/v1/delivery*
+# *Ingresar 7 en el horario en el cuerpo de la solicitud:* 
+{
+    ""deliveryTime"": 7,
+    ""productsCount"": 10,
+    ""productsWeight"": 11
+}
+
+h3. *Resultado esperado: 400 Bad Request - ""isItPossibleToDeliver"": false,*
+
+h3. *Resultado obtenido: 200 OK ' ""isItPossibleToDeliver"": true,*
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 10:37 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.33.10 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10037,,,,,,,,,,,,,,,,,0|i0007z:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:34 PM
+No se pueden agregar 30 id de producto a un kit.,TQP4-4,10037,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:21 PM,31/ene/25 10:35 PM,31/ene/25 10:35 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/v1/kits/2/products*
+# *Ingresar 30 id de productos en el cuerpo de la solicitud:* 
+{
+    ""productsList"": [
+        {
+            ""id"": 1,
+            ""quantity"": 2
+        },
+        {
+            ""id"": 2,
+            ""quantity"": 2
+        },
+        {
+            ""id"": 3,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 4,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 5,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 6,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 7,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 8,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 9,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 10,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 11,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 12,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 13,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 14,
+            ""quantity"": 1
+        }
+        {
+            ""id"": 15,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 16,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 17,
+            ""quantity"": 1
+        }
+        {
+            ""id"": 18,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 19,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 20,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 21,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 22,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 23,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 24,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 25,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 26,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 27,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 28,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 29,
+            ""quantity"": 1
+        }
+    ]
+}
+
+h3. *Resultado esperado: 200 OK* 
+
+h3. *Resultado obtenido:* . 400 Bad Request
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 10:22 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.21.51 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10036,,,,,,,,,,,,,,,,,0|i0007r:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:21 PM
+"No se pueden agregar 29 id de producto a un kit. POST, /api/v1/kits/:id/products, 200 OK",TQP4-3,10036,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:15 PM,01/feb/25 3:30 PM,01/feb/25 3:29 PM,,,0,"h2. +*Pasos a seguir:*+ 
+
+# *Ir al banco de pruebas.*
+# *Envía una solicitud POST a /api/v1/kits/2/products*
+# *Ingresar 29 id de productos en el cuerpo de la solicitud:* 
+{
+    ""productsList"": [
+        {
+            ""id"": 1,
+            ""quantity"": 2
+        },
+        {
+            ""id"": 2,
+            ""quantity"": 2
+        },
+        {
+            ""id"": 3,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 4,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 5,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 6,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 7,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 8,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 9,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 10,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 11,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 12,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 13,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 14,
+            ""quantity"": 1
+        }
+        {
+            ""id"": 15,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 16,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 17,
+            ""quantity"": 1
+        }
+        {
+            ""id"": 18,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 19,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 20,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 21,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 22,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 23,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 24,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 25,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 26,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 27,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 28,
+            ""quantity"": 1
+        },
+        {
+            ""id"": 29,
+            ""quantity"": 1
+        }
+    ]
+}
+
+h3. *Resultado esperado: 200 OK* 
+
+h3. *Resultado obtenido:* . 400 Bad Request
+
+h3. 
+
+h3. *Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,TQP4-20,,31/ene/25 10:20 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-31 at 10.20.43 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10035,,,,,,,,,,,,,,,,,0|i0007j:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:15 PM
+"Se pueden agregar la cantidad de 0 productos a un kit. POST, /api/v1/kits/:id/products, 200 OK",TQP4-2,10035,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:12 PM,01/feb/25 3:30 PM,01/feb/25 3:29 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/2/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": 1,
+ ""quantity"":
+ 0
+ }
+ ]
+ }
+
+*Resultado esperado:* 4XX ERROR
+
+*Resultado obtenido:* 200 OK. Se agrega la cantidad de 0 productos en el kit.
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 10:14 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-30 at 4.34.17 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10034,,,,,,,,,,,,,,,,,0|i0007b:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:12 PM
+"Se pueden agregar productos inexistentes a un kit. POST, /api/v1/kits/:id/products, 200 OK",TQP4-1,10034,Error,Tareas por hacer,TQP4,TripleTen QA Project 4,software,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,Medium,,,,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,31/ene/25 10:08 PM,01/feb/25 3:30 PM,01/feb/25 3:28 PM,,,0,"*Pasos a seguir:* 
+
+# Ir al banco de pruebas.
+# Envía una solicitud POST a /api/v1/kits/2/products
+# Ingresar los siguientes valores en el cuerpo de la solicitud: 
+{
+ ""productsList"": [
+ {
+ ""id"": 94,
+ ""quantity"":
+ 2
+ }
+ ]
+ }
+
+*Resultado esperado:* 4XX ERROR
+
+*Resultado obtenido:* 200 OK. Se crea el producto inexistente en el kit.
+
+*Severidad*: Crítica",macOS Sequoia 15.2. Postman v11.30.4.,Josué Tenorio,712020:1ee758c8-9d04-4235-83d9-e1b870dff4c8,,,,,,,,,,,31/ene/25 10:08 PM;70f52172-809a-4ae2-a950-4cd1f95fc777;Screenshot 2025-01-28 at 6.48.39 p.m..png;https://tndjosue.atlassian.net/rest/api/3/attachment/content/10033,,,,,,,,,,,,,,,,,0|i00073:,,,,,,,,,,,,,,Por hacer,31/ene/25 10:08 PM
