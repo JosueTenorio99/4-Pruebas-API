@@ -31,4 +31,6 @@ El objetivo principal fue probar estas nuevas funciones a través de **Postman**
 
 #### 🐞📄 `Josué Tenorio - Informe_de_Errores_Sprint4.csv` → Archivo CSV con los informes de errores generados en Jira durante las pruebas.
 
+#### 📝 `Feedback Sprint 4.png` → Captura del feedback recibido en la revisión del sprint.
+
 #### 📜 `README.md` → Este archivo con la descripción del proyecto.
